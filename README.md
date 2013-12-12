@@ -1,7 +1,7 @@
 # [UglifyJS](http://github.com/mishoo/UglifyJS) Plugin for [DocPad](http://docpad.org)
 
-[![Build Status](https://secure.travis-ci.org/RobLoach/docpad-plugin-uglify.png?branch=master)](http://travis-ci.org/RobLoach/docpad-plugin-jsmin "Check this project's build status on TravisCI")
-[![NPM version](https://badge.fury.io/js/docpad-plugin-uglify.png)](http://badge.fury.io/js/docpad-plugin-jsmin "View this project on NPM")
+[![Build Status](https://secure.travis-ci.org/RobLoach/docpad-plugin-uglify.png?branch=master)](http://travis-ci.org/RobLoach/docpad-plugin-uglify "Check this project's build status on TravisCI")
+[![NPM version](https://badge.fury.io/js/docpad-plugin-uglify.png)](http://badge.fury.io/js/docpad-plugin-uglify "View this project on NPM")
 [![Gittip button](http://img.shields.io/gittip/RobLoach.png)](https://www.gittip.com/RobLoach/ "Support this project using Gittip")
 [![Flattr button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/2257574/RobLoach "Support this project using Flattr")
 
