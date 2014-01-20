@@ -12,6 +12,9 @@ module.exports = (BasePlugin) ->
         development:
           enabled: false
 
+      # The default enabled state for each document.
+      enabled: true
+
     # Constructor
     constructor: ->
       # Prepare
@@ -27,7 +30,7 @@ module.exports = (BasePlugin) ->
     renderDocument: (opts,next) ->
       # Prepare.
       {extension, templateData, file, content} = opts
-      
+
       # Ensure we are acting on a JavaScript document.
       if extension == 'js' and file.type == 'document'
         # Construct the options.
@@ -42,13 +45,14 @@ module.exports = (BasePlugin) ->
           uglifyOptions[key] = value
 
         # Allow overriding using the document options.
-        if templateData.document.uglify or false
+        if templateData.document.uglify?
           for own key, value of templateData.document.uglify
             uglifyOptions[key] = value
 
-        # Render the page with UglifyJS.
-        result = @UglifyJS.minify(content, uglifyOptions)
-        opts.content = result.code
+        # Render the page with UglifyJS, if toggled.
+        if uglifyOptions.enabled
+          result = @UglifyJS.minify(content, uglifyOptions)
+          opts.content = result.code
 
       # Done, return back to DocPad
       return next()
